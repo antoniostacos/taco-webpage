@@ -2,6 +2,8 @@
 # Linux x64
 FROM node:current-alpine
 
+RUN apk add --no-cache postgresql-client
+
 LABEL org.opencontainers.image.title="Antonio's Tacos" \
       org.opencontainers.image.description="demo webpage" \
       org.opencontainers.image.authors="glueOps"
