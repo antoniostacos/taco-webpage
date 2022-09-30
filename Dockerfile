@@ -18,7 +18,7 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 
 # Install dependencies from packages.json
-RUN npm install
+RUN npm ci
 
 # Command for container to execute
 CMD [ "node", "app.js" ]
