@@ -42,7 +42,8 @@ const client = new Client({
   password: DATABASE_PASSWORD,
   host: DATABASE_HOST,
   port: DATABASE_PORT,
-  database: DATABASE_NAME
+  database: DATABASE_NAME,
+  ssl: true
 })
 
 
