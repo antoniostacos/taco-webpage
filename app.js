@@ -24,10 +24,11 @@ app.listen(port, function () {
 });
 
 
-const DB_USER = process.env.DB_USER
-const DB_NAME = process.env.DB_NAME
-const DB_PASS = process.env.DB_PASS
-const HOST = process.env.HOST
+const DATABASE_USERNAME = process.env.DATABASE_USERNAME
+const DATABASE_NAME = process.env.DATABASE_NAME
+const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD
+const DATABASE_HOST = process.env.DATABASE_HOST
+const DATABASE_PORT = process.env.DATABASE_PORT
 
 
 const { Client } = require('pg')
@@ -37,8 +38,8 @@ process.on('uncaughtException', function (err) {
 });
 
 const client = new Client({
-  user: DATABASE_USER,
-  password: DATABASE_PASS,
+  user: DATABASE_USERNAME,
+  password: DATABASE_PASSWORD,
   host: DATABASE_HOST,
   port: DATABASE_PORT,
   database: DATABASE_NAME
